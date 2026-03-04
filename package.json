@@ -1,0 +1,26 @@
+{
+  "name": "tab-group-auto-sleep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development vite build --watch",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "dragonish",
+  "license": "GPL-3.0-only",
+  "packageManager": "pnpm@10.30.3",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/chrome": "^0.1.37",
+    "@types/node": "^25.3.3",
+    "cross-env": "^10.1.0",
+    "eslint": "^10.0.2",
+    "globals": "^17.4.0",
+    "rollup-plugin-html-location": "^0.1.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1",
+    "vite": "^7.3.1"
+  }
+}
