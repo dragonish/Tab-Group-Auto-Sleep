@@ -1,5 +1,5 @@
 {
   "extDes": {
-    "message": "Tab Group Auto-Sleep"
+    "message": "When opening a tab group, automatically sleep other inactive tabs in the group"
   }
 }
