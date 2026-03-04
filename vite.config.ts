@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite';
 import path from 'node:path';
 import HTMLLocation from 'rollup-plugin-html-location';
+import ZipPack from 'vite-plugin-zip-pack';
+import packageInfo from './package.json';
 
 const productionMode = process.env.NODE_ENV === 'production';
 const modeDir = productionMode ? 'build' : 'dist';
@@ -39,5 +41,12 @@ export default defineConfig({
     HTMLLocation({
       filename: input => input.replace('src/', ''),
     }),
+    productionMode
+      ? ZipPack({
+          inDir: outDir,
+          outDir: 'archive',
+          outFileName: `${packageInfo.name}_v${packageInfo.version}.zip`,
+        })
+      : undefined,
   ],
 });
